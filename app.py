@@ -8,9 +8,9 @@ import calendar
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
-# st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
-st.set_page_config(theme={"base": "light"})
+# st.set_page_config(theme={"base": "light"})
 
 st.title("Light Mode Only App")
 
