@@ -21,12 +21,7 @@ st.set_page_config(layout="wide")
 # POTD test
 url = "https://docs.google.com/spreadsheets/d/1PfOBLuiQcNfOdTgdTAkgw8vqivz7liHQimlzr4AgBHc/edit?usp=sharing"
 
-
-
 conn = st.connection("gsheets", type=GSheetsConnection)
-df = conn.read(spreadsheet=url, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
-# df['Date'] = pd.to_datetime(df['Date'])
-
-
+df = conn.read(spreadsheet=url, usecols=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
 st.dataframe(df)
 
