@@ -9,7 +9,7 @@ import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
 st.set_page_config(layout="wide")
-# st.set_page_config(base="light")
+
 
 
 
@@ -20,9 +20,5 @@ df = conn.read(spreadsheet=url, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8])
 df['Date'] = pd.to_datetime(df['Date'])
 
 
+st.dataframe(df)
 
-df_filtered = df
-st.dataframe(df_filtered)
-
-
-# git add . && git commit -m "Deploy test commits" && git push -u origin main
