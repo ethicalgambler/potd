@@ -8,7 +8,7 @@ import calendar
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="centered")
 
 
 
