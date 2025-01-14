@@ -11,25 +11,26 @@ from streamlit_gsheets import GSheetsConnection
 st.set_page_config(layout="wide")
 
 # Load the data from the Google sheet
-url = "https://docs.google.com/spreadsheets/d/1XoVHcy6qqwKKT7HiIb5CKwv32_1Ce1fhl5XoPW-lREI/edit?usp=sharing"
+url = "https://docs.google.com/spreadsheets/d/1XoVHcy6qqwKKT7HiIb5CKwv32_1Ce1fhl5XoPW-lREI/edit?usp=sharing" 
+# url = "https://docs.google.com/spreadsheets/d/1KD-sPzMceSj-rWafb-6FPzhoaAQ48i2r2p9oJDQEoUY/edit?usp=sharing"
 conn = st.connection("gsheets", type=GSheetsConnection)
 df = conn.read(spreadsheet=url, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8])
 df['Date'] = pd.to_datetime(df['Date'])
 
 # Sidebar to filter by sport and date range
-sports = df['Sport'].unique()
-selected_sport = st.sidebar.selectbox('Select Sport', options=['All'] + list(sports))
+# sports = df['Sport'].unique()
+# selected_sport = st.sidebar.selectbox('Select Sport', options=['All'] + list(sports))
 
-if selected_sport != 'All':
-    df = df[df['Sport'] == selected_sport]
+# if selected_sport != 'All':
+#     df = df[df['Sport'] == selected_sport]
 
-date_range = st.sidebar.date_input("Select Date Range", [df['Date'].min(), df['Date'].max()])
+# date_range = st.sidebar.date_input("Select Date Range", [df['Date'].min(), df['Date'].max()])
 
-if len(date_range) == 2:
-    start_date, end_date = date_range
-    df = df[(df['Date'] >= pd.to_datetime(start_date)) & (df['Date'] <= pd.to_datetime(end_date))]
-else:
-    st.sidebar.warning("Please select both start and end dates.")
+# if len(date_range) == 2:
+#     start_date, end_date = date_range
+#     df = df[(df['Date'] >= pd.to_datetime(start_date)) & (df['Date'] <= pd.to_datetime(end_date))]
+# else:
+#     st.sidebar.warning("Please select both start and end dates.")
 
 # Filter for 2024 data
 df_2024 = df[df['Date'].dt.year == 2024]
