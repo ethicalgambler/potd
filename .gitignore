@@ -4,3 +4,5 @@
 # Ignore logs and temporary files
 *.log
 *.tmp
+
+# potd.code-workspace
