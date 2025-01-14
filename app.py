@@ -31,21 +31,26 @@ df = conn.read(spreadsheet=url, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1
 
 
 # Define a list of new, readable column names
-new_column_names = [
+column_names = [
     'Capper', 'Tot W/L', 'L10', 'STRK', 'Avg U', 'ROI %', 'Date', 'League / Sport', 'Pick /Prop', 'Units', 'US', 'Dec', 'W', 'L', 'P', 'W/L', 'Notes'
 ]
 
 # Rename the columns
-df.columns = new_column_names
+df.columns = column_names
 
 # Now you can reference the columns by their new names
 
 #
 ###
 
+# Get today's date
+today = pd.to_datetime(datetime.today().strftime('%Y-%m-%d'))
+
+# Filter the DataFrame to show only rows from today
+df_today = df[df['Column 6'] == today]
 
 
-st.dataframe(df, hide_index=True)
+st.dataframe(df_today, hide_index=True)
 
 
 
