@@ -9,7 +9,7 @@ import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
 st.set_page_config(layout="wide")
-st.set_page_config(base="light")
+# st.set_page_config(base="light")
 
 # Load the data from the Google sheet
 
