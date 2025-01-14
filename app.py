@@ -11,7 +11,7 @@ from streamlit_gsheets import GSheetsConnection
 
 
 # Force light mode
-st.set_page_config(layout="wide", initial_sidebar_state="expanded", theme={"base": "light"})
+st.set_page_config(theme={"base": "light"})
 
 st.title("Light Mode Only App")
 st.write("This app is forced to display in light mode.")
