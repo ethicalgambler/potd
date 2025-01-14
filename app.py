@@ -41,8 +41,8 @@ new_column_names = [
 df.columns = new_column_names
 
 # Now you can reference the columns by their new names
-st.dataframe(df.columns)
 
+#
 
 
 
