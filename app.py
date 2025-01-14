@@ -27,18 +27,20 @@ url = "https://docs.google.com/spreadsheets/d/1PfOBLuiQcNfOdTgdTAkgw8vqivz7liHQi
 conn = st.connection("gsheets", type=GSheetsConnection)
 df = conn.read(spreadsheet=url, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
 
-# Display the DataFrame without the index
-
-
-# Define a list of new, readable column names
 column_names = [
     'Capper', 'Tot W/L', 'L10', 'STRK', 'Avg U', 'ROI %', 'Date', 'League / Sport', 'Pick /Prop', 'Units', 'US', 'Dec', 'W', 'L', 'P', 'W/L', 'Notes'
 ]
 
 df.columns = column_names
 
+# Convert the 'Date' column to datetime format (assuming the date format is MM/DD/YY)
+df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
 
-st.dataframe(df, hide_index=True)
+# Get today's date
+today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
 
+# Filter the DataFrame to show only rows from today
+df_today = df[df['Date'] == today]
 
-
+# Display the filtered DataFrame
+st.dataframe(df_today, hide_index=True)
