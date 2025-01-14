@@ -34,4 +34,7 @@ df_2025 = df[df['Date'].dt.year == 2025]
 
 #df_filtered['Date'] = df_filtered['Date'].dt.strftime('%m/%d/%Y')
 df_filtered = df_filtered.sort_values(by='Date', ascending=False)
-st.dataframe()
+st.dataframe(df_filtered)
+
+
+# git add . && git commit -m "Deploy test commits" && git push -u origin main
