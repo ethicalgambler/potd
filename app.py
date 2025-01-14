@@ -44,10 +44,10 @@ df.columns = column_names
 ###
 
 # Get today's date
-today = pd.to_datetime(datetime.today().strftime('%Y-%m-%d'))
+today = pd.to_datetime(datetime.today().strftime('%m/%d/%Y'))
 
 # Filter the DataFrame to show only rows from today
-df_today = df[df['Column 6'] == today]
+df_today = df[df[6] == today]
 
 
 st.dataframe(df_today, hide_index=True)
