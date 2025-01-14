@@ -35,22 +35,10 @@ column_names = [
     'Capper', 'Tot W/L', 'L10', 'STRK', 'Avg U', 'ROI %', 'Date', 'League / Sport', 'Pick /Prop', 'Units', 'US', 'Dec', 'W', 'L', 'P', 'W/L', 'Notes'
 ]
 
-# Rename the columns
 df.columns = column_names
 
-# Now you can reference the columns by their new names
 
-#
-###
-
-# Get today's date
-today = pd.to_datetime(datetime.today().strftime('%m/%d/%Y'))
-
-# Filter the DataFrame to show only rows from today
-df_today = df[df[6] == today]
-
-
-st.dataframe(df_today, hide_index=True)
+st.dataframe(df, hide_index=True)
 
 
 
