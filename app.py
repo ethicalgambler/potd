@@ -21,7 +21,7 @@ df['Date'] = pd.to_datetime(df['Date'])
 
 
 #df_filtered['Date'] = df_filtered['Date'].dt.strftime('%m/%d/%Y')
-df_filtered = df_filtered.sort_values(by='Date', ascending=False)
+df_filtered = df
 st.dataframe(df_filtered)
 
 
