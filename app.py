@@ -9,7 +9,7 @@ import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
 st.set_page_config(layout="centered")
-
+st.set_page_config(layout="wide")
 
 
 
