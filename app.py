@@ -220,4 +220,4 @@ fig_2025.update_layout(
         range=[y_min_2025, y_max_2025]
     )
 )
-st.plotly_chart(fig_2025)
+# st.plotly_chart(fig_2025)
