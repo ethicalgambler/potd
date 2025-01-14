@@ -8,6 +8,7 @@ import calendar
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
+
 st.set_page_config(layout="wide")
 
 # st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
@@ -47,28 +48,3 @@ df_today = df[df['Date'] == today]
 st.dataframe(df_today)
 
 
-
-
-# Trigger for refreshing the Google Sheets data
-if st.button("Reload Data"):
-    conn = st.connection("gsheets", type=GSheetsConnection)
-    df = conn.read(spreadsheet=url, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
-
-    column_names = [
-        'Capper', 'Tot W/L', 'L10', 'STRK', 'Avg U', 'ROI %', 'Date', 'League / Sport', 'Pick /Prop', 
-        'Units', 'US', 'Dec', 'W', 'L', 'P', 'W/L', 'Notes'
-    ]
-    
-    df.columns = column_names
-    
-    # Convert 'Date' column to datetime
-    df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
-
-    # Get today's date and filter data
-    today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
-    df_today = df[df['Date'] == today]
-
-    # Show the filtered data
-    st.dataframe(df_today, hide_index=True)
-else:
-    st.write("Click the button to reload data.")
