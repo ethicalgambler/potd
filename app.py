@@ -32,7 +32,7 @@ df = conn.read(spreadsheet=url, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1
 
 # Define a list of new, readable column names
 new_column_names = [
-    'Column_1', 'Column_2', 'Column_3', 'Column_4', 'Column_5', 'Column_6', 
+    'Capper', 'Column_2', 'Column_3', 'Column_4', 'Column_5', 'Column_6', 
     'Column_7', 'Column_8', 'Column_9', 'Column_10', 'Column_11', 'Column_12', 
     'Column_13', 'Column_14', 'Column_15', 'Column_16', 'Column_17'
 ]
