@@ -11,7 +11,7 @@ from streamlit_gsheets import GSheetsConnection
 st.set_page_config(layout="wide")
 # st.set_page_config(base="light")
 
-# Load the data from the Google sheet
+
 
 url = "https://docs.google.com/spreadsheets/d/1XoVHcy6qqwKKT7HiIb5CKwv32_1Ce1fhl5XoPW-lREI/edit?usp=sharing" 
 # url = "https://docs.google.com/spreadsheets/d/1KD-sPzMceSj-rWafb-6FPzhoaAQ48i2r2p9oJDQEoUY/edit?usp=sharing"
@@ -20,7 +20,7 @@ df = conn.read(spreadsheet=url, usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8])
 df['Date'] = pd.to_datetime(df['Date'])
 
 
-#df_filtered['Date'] = df_filtered['Date'].dt.strftime('%m/%d/%Y')
+
 df_filtered = df
 st.dataframe(df_filtered)
 
