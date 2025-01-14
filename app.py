@@ -8,8 +8,13 @@ import calendar
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
-st.set_page_config(layout="wide")
 
+
+# Force light mode
+st.set_page_config(layout="wide", initial_sidebar_state="expanded", theme={"base": "light"})
+
+st.title("Light Mode Only App")
+st.write("This app is forced to display in light mode.")
 
 
 # leguppicks
