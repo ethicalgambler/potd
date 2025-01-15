@@ -20,11 +20,9 @@ st.error("This is an error alert!")
 st.warning("This is a warning alert!")
 st.success("This is a success alert!")
 
-# st_theme = st_javascript("""window.getComputedStyle(window.parent.document.getElementsByClassName("stApp")[0]).getPropertyValue("color-scheme")""")
-# if st_theme == "dark":
-#     print("Dark Mode")
-# else:
-#     print("Light Mode")
+from streamlit_theme import st_theme
+theme = st_theme()
+st.write(theme)
 
 
 
