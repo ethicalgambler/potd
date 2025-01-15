@@ -5,3 +5,4 @@ plotly
 matplotlib
 streamlit-calendar
 st-gsheets-connection
+st-theme
