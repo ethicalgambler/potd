@@ -9,15 +9,13 @@ import pathlib
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
-st.set_page_config(layout="wide")
+# Load page config
+st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
 
-# Function to load CSS from the 'assets' folder
+
 def load_css(file_path):
     with open(file_path) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-
-# Load the external CSS
 css_path = pathlib.Path("assets/styles.css")
 load_css(css_path)
 
@@ -25,7 +23,6 @@ load_css(css_path)
 
 
 
-# st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
 
 
 st.title("Light Mode Only App")
