@@ -9,16 +9,23 @@ import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
 
+custom_css = """
+<style>
+    body {
+        background-color: #f4f4f4;  /* Light background */
+        color: #333;  /* Dark text */
+    }
+    .stDataFrame { 
+        text-align: center;  /* Example for centering text in tables */
+    }
+    h1 {
+        text-align: center;
+        color: #4CAF50;
+    }
+</style>
+"""
 
-# # Read the external CSS file
-# def load_css(file_name):
-#     with open(file_name, "r") as f:
-#         return f"<style>{f.read()}</style>"
-
-# # Apply the CSS
-# custom_css = load_css("styles.css")
-# st.markdown(custom_css, unsafe_allow_html=True)
-
+st.markdown(custom_css, unsafe_allow_html=True)
 
 
 
