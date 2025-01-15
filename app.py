@@ -19,7 +19,7 @@ def load_css(file_path):
 
 # Load the external CSS
 css_path = pathlib.Path("assets/styles.css")
-load_css(css_path)
+# load_css(css_path)
 
 
 
