@@ -8,7 +8,7 @@ import calendar
 import pathlib
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
-# from streamlit_javascript import st_javascript
+from streamlit_theme import st_theme
 
 
 
@@ -19,16 +19,13 @@ st.set_page_config(layout="wide")
 # Load page config end
 
 
-st.error("This is an error alert!")
-st.warning("This is a warning alert!")
-st.success("This is a success alert!")
+# st.error("This is an error alert!")
+# st.warning("This is a warning alert!")
+# st.success("This is a success alert!")
 
-from streamlit_theme import st_theme
 theme = st_theme()
 st.write(theme['backgroundColor'])
 # ligth:0e1117
-
-
 
 # Custom CSS fucntion start
 def load_css(file_path):
