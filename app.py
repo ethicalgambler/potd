@@ -9,23 +9,25 @@ import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
 
-custom_css = """
+
+
+st.write("text outside the container")
+with st.container():
+    st.write("text inside the container")
+
+st.write("More text outside the container")
+
+
+st.markdown(
+    """
 <style>
-    body {
-        background-color: #f4f4f4;  /* Light background */
-        color: #333;  /* Dark text */
-    }
-    .stDataFrame { 
-        text-align: center;  /* Example for centering text in tables */
-    }
-    h1 {
-        text-align: center;
-        color: #4CAF50;
+    div[data-testid="stVerticalBlock"] div[style*="flex-direction: column;"] div[data-testid="stVerticalBlock"] {
+        border: 1px solid red;
     }
 </style>
-"""
-
-st.markdown(custom_css, unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
 
 
 
