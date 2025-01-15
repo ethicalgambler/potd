@@ -8,10 +8,22 @@ import calendar
 import pathlib
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
+from streamlit_javascript import st_javascript
+
+
+
 
 # Load page config
 st.set_page_config(layout="wide")
 # st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
+
+
+st_theme = st_javascript("""window.getComputedStyle(window.parent.document.getElementsByClassName("stApp")[0]).getPropertyValue("color-scheme")""")
+if st_theme == "dark":
+    print("Dark Mode")
+else:
+    print("Light Mode")
+
 
 
 def load_css(file_path):
