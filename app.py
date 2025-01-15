@@ -11,20 +11,21 @@ import numpy as np
 from streamlit_gsheets import GSheetsConnection
 from streamlit_theme import st_theme
 
-# Initialize session state for spinner control
+# Initialize session state to control loading
 if "loaded" not in st.session_state:
     st.session_state.loaded = False
 
-# Show spinner for 5 seconds on the first load
+# Show spinner only on the first load
 if not st.session_state.loaded:
     with st.spinner("Loading app... Please wait."):
         time.sleep(5)  # Simulate a loading process
     st.session_state.loaded = True  # Mark as loaded
-    st.experimental_rerun()  # Rerun the app to load the content
 
 # Main app content
-st.success("The app has loaded successfully!")
-st.write("You can now use the app!")
+if st.session_state.loaded:
+    st.success("The app has loaded successfully!")
+    st.write("You can now use the app!")
+
 
 
 # Load page config start
