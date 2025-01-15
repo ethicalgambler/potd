@@ -10,7 +10,8 @@ import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
 # Load page config
-st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
+st.set_page_config(layout="wide")
+# st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
 
 
 def load_css(file_path):
