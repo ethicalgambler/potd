@@ -9,7 +9,7 @@ import pathlib
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
-
+st.set_page_config(layout="wide")
 
 # Function to load CSS from the 'assets' folder
 def load_css(file_path):
@@ -23,7 +23,7 @@ load_css(css_path)
 
 
 
-# st.set_page_config(layout="wide")
+
 
 # st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
 
