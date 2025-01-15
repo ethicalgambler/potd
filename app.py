@@ -5,29 +5,21 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
 import calendar
+import pathlib
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
 
 
-
-st.write("text outside the container")
-with st.container():
-    st.write("text inside the container")
-
-st.write("More text outside the container")
+# Function to load CSS from the 'assets' folder
+def load_css(file_path):
+    with open(file_path) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-st.markdown(
-    """
-<style>
-    div[data-testid="stVerticalBlock"] div[style*="flex-direction: column;"] div[data-testid="stVerticalBlock"] {
-        border: 1px solid red;
-    }
-</style>
-""",
-    unsafe_allow_html=True,
-)
+# Load the external CSS
+css_path = pathlib.Path("assets/styles.css")
+load_css(css_path)
 
 
 
