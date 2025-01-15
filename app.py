@@ -57,7 +57,7 @@ today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
 df_today = df[df['Date'] == today]
 
 # Display the filtered DataFrame
-# st.dataframe(df_today, hide_index=True)
-st.dataframe(df_today)
+st.dataframe(df_today, hide_index=True)
+# st.dataframe(df_today)
 
 
