@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_theme import st_theme
 import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.express as px
@@ -9,7 +10,7 @@ import time
 import pathlib
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
-from streamlit_theme import st_theme
+
 
 # Load page config start
 st.set_page_config(layout="wide")
@@ -24,8 +25,8 @@ st.success("This is a success alert!")
 
 # time.sleep(5)
 theme = st_theme()
-# st.write(theme['backgroundColor'])
-# ligth:0e1117
+st.write(theme['backgroundColor'])
+
 
 # Custom CSS fucntion start
 def load_css(file_path):
