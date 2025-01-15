@@ -22,7 +22,7 @@ st.warning("This is a warning alert!")
 st.success("This is a success alert!")
 
 
-time.sleep(5)
+# time.sleep(5)
 theme = st_theme()
 st.write(theme['backgroundColor'])
 # ligth:0e1117
