@@ -9,6 +9,19 @@ import numpy as np
 from streamlit_gsheets import GSheetsConnection
 
 
+
+# Read the external CSS file
+def load_css(file_name):
+    with open(file_name, "r") as f:
+        return f"<style>{f.read()}</style>"
+
+# Apply the CSS
+custom_css = load_css("styles.css")
+st.markdown(custom_css, unsafe_allow_html=True)
+
+
+
+
 st.set_page_config(layout="wide")
 
 # st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
