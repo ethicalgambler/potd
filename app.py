@@ -11,35 +11,19 @@ import numpy as np
 from streamlit_gsheets import GSheetsConnection
 from streamlit_theme import st_theme
 
-# Initialize session state to control loading
-if "loaded" not in st.session_state:
-    st.session_state.loaded = False
-
-# Show spinner only on the first load
-if not st.session_state.loaded:
-    with st.spinner("Loading app... Please wait."):
-        time.sleep(5)  # Simulate a loading process
-    st.session_state.loaded = True  # Mark as loaded
-
-# Main app content
-if st.session_state.loaded:
-    st.success("The app has loaded successfully!")
-    st.write("You can now use the app!")
-
-
-
 # Load page config start
 st.set_page_config(layout="wide")
 # st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
 # Load page config end
 
 
-# st.error("This is an error alert!")
-# st.warning("This is a warning alert!")
-# st.success("This is a success alert!")
+st.error("This is an error alert!")
+st.warning("This is a warning alert!")
+st.success("This is a success alert!")
 
-theme = st_theme()
-st.write(theme['backgroundColor'])
+time.sleep(5)
+
+st.write(st_theme(['backgroundColor')])
 # ligth:0e1117
 
 # Custom CSS fucntion start
