@@ -25,7 +25,9 @@ st.success("This is a success alert!")
 
 from streamlit_theme import st_theme
 theme = st_theme()
-st.write(theme)
+st.write(theme['backgroundColor'])
+# ligth:0e1117
+
 
 
 # Custom CSS fucntion start
