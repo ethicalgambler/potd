@@ -24,7 +24,7 @@ st.warning("This is a warning alert!")
 st.success("This is a success alert!")
 
 from streamlit_theme import st_theme
-theme = st_theme()
+theme = st_theme('primaryColor')
 st.write(theme)
 
 
