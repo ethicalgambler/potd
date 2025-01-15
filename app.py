@@ -10,14 +10,14 @@ from streamlit_gsheets import GSheetsConnection
 
 
 
-# Read the external CSS file
-def load_css(file_name):
-    with open(file_name, "r") as f:
-        return f"<style>{f.read()}</style>"
+# # Read the external CSS file
+# def load_css(file_name):
+#     with open(file_name, "r") as f:
+#         return f"<style>{f.read()}</style>"
 
-# Apply the CSS
-custom_css = load_css("styles.css")
-st.markdown(custom_css, unsafe_allow_html=True)
+# # Apply the CSS
+# custom_css = load_css("styles.css")
+# st.markdown(custom_css, unsafe_allow_html=True)
 
 
 
