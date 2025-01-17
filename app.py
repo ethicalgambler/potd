@@ -25,7 +25,7 @@ st.success("This is a success alert!")
 
 # time.sleep(5)
 theme = st_theme()
-st.write(theme['backgroundColor'])
+st.write(theme)
 
 
 # Custom CSS fucntion start
