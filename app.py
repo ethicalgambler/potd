@@ -29,7 +29,7 @@ load_css(css_path)
 
 # st.error("This is an error alert!")
 # st.warning("This is a warning alert!")
-# st.success("This is a success alert!")
+st.success("This is a success alert!")
 
 
 # # time.sleep(5)
@@ -67,7 +67,7 @@ else:
     df.columns = column_names
 
     # Convert the 'Date' column to datetime format (assuming the date format is MM/DD/YY)
-    df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
+    df['Date'] = p  d.to_datetime(df['Date'], format='%m/%d/%y')
 
     # Get today's date
     today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
