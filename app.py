@@ -71,7 +71,7 @@ else:
 
     # Get today's date
     today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
-    print.today
+    print(today)
     # Filter the DataFrame to show only rows from today
     df_today = df[df['Date'] == "1/16/25"]
 
