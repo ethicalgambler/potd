@@ -79,7 +79,7 @@ else:
     today = datetime.today()
     formatted_date = today.strftime('%m/%d/%y').lstrip('0').replace('/0', '/')
     print(formatted_date)
-
+    print('test')
     
 
     # Filter the DataFrame to show only rows from today
