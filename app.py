@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 from datetime import datetime
 import calendar
 import time
+import pytz
 import pathlib
 import numpy as np
 from streamlit_gsheets import GSheetsConnection
@@ -76,8 +77,14 @@ else:
 
 
 
-    today = datetime.today()
-    formatted_date = today.strftime('%m/%d/%y').lstrip('0').replace('/0', '/')
+    # today = datetime.today()
+    # formatted_date = today.strftime('%m/%d/%y').lstrip('0').replace('/0', '/')
+    # st.success(formatted_date)
+
+    user_timezone = pytz.timezone('America/New_York')  # Example for Eastern Time
+    user_time = datetime.now(user_timezone)
+
+    formatted_date = user_time.strftime('%m/%d/%y').lstrip('0').replace('/0', '/')
     st.success(formatted_date)
 
     
