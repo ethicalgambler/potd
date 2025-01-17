@@ -76,14 +76,14 @@ else:
 
 
 
-    # today = datetime.today()
-    # formatted_date = today.strftime('%-m/%-d/%y')  # Use '-' to remove leading zeros
-    # print(formatted_date)
+    today = datetime.today()
+    formatted_date = today.strftime('%-m/%-d/%y')  # Use '-' to remove leading zeros
+    
 
     
 
     # Filter the DataFrame to show only rows from today
-    df_today = df[df['Date'] == "1/16/25"]
+    df_today = df[df['Date'] == formatted_date]
 
     # Display the filtered DataFrame
     st.dataframe(df_today, hide_index=True)
