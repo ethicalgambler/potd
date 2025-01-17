@@ -18,9 +18,9 @@ st.set_page_config(layout="wide")
 # Load page config end
 
 
-st.error("This is an error alert!")
-st.warning("This is a warning alert!")
-st.success("This is a success alert!")
+# st.error("This is an error alert!")
+# st.warning("This is a warning alert!")
+# st.success("This is a success alert!")
 
 
 # # time.sleep(5)
@@ -28,8 +28,13 @@ st.success("This is a success alert!")
 # st.write(theme)
 
 theme = st_theme()
-background_color = theme.get("backgroundColor")  # Use .get() for safe access
-st.write(background_color)
+background_color = theme.get("backgroundColor")
+
+if background_color != "#ffffff":
+    st.warning("This is a warning alert!")
+else:
+
+
 
 
 
