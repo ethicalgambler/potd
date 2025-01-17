@@ -68,13 +68,12 @@ else:
 
     # Convert the 'Date' column to datetime format (assuming the date format is MM/DD/YY)
     # df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
-    df['Date'] = "1/16/25"
 
     # Get today's date
     today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
 
     # Filter the DataFrame to show only rows from today
-    df_today = df[df['Date'] == today]
+    df_today = df[df['Date'] == "1/16/25"]
 
     # Display the filtered DataFrame
     st.dataframe(df_today, hide_index=True)
