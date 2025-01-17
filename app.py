@@ -28,7 +28,7 @@ st.success("This is a success alert!")
 # st.write(theme)
 
 theme = st_theme()
-background_color = theme.get("backgroundColor", "Key not found")  # Use .get() for safe access
+background_color = theme.get("backgroundColor")  # Use .get() for safe access
 st.write(background_color)
 
 
