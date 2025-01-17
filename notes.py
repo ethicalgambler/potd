@@ -18,3 +18,12 @@
 
     # POTD original
     # url = "https://docs.google.com/spreadsheets/d/1KD-sPzMceSj-rWafb-6FPzhoaAQ48i2r2p9oJDQEoUY/edit?usp=sharing"
+
+
+
+    # # Convert the 'Date' column to datetime format (assuming the date format is MM/DD/YY)
+    # df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
+
+    # # Get today's date
+    # today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
+    # st.success(today)
