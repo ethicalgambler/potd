@@ -15,7 +15,6 @@ from streamlit_gsheets import GSheetsConnection
 
 # Load page config start
 st.set_page_config(layout="wide")
-# st.set_page_config(layout="centered", initial_sidebar_state="expanded", theme={"base": "light"})
 # Load page config end
 
 # Custom CSS fucntion start
@@ -26,35 +25,14 @@ css_path = pathlib.Path("assets/styles.css")
 load_css(css_path)
 # Custom CSS fucntion end
 
-
-
-# st.error("This is an error alert!")
-# st.warning("This is a warning alert!")
-st.success("This is a success alert!")
-
-# # time.sleep(5)
-# theme = st_theme()
-# st.write(theme)
-
+# Script to identify if light mode is being used
 theme = st_theme()
 background_color = theme.get("backgroundColor", None)
 
 if background_color != "#ffffff":
     st.warning("This is a warning alert!")
 else:
-
     
-
-
-    # st.title("Light Mode Only App")
-
-    # leguppicks
-    # url = "https://docs.google.com/spreadsheets/d/1XoVHcy6qqwKKT7HiIb5CKwv32_1Ce1fhl5XoPW-lREI/edit?usp=sharing" 
-
-    # POTD original
-    # url = "https://docs.google.com/spreadsheets/d/1KD-sPzMceSj-rWafb-6FPzhoaAQ48i2r2p9oJDQEoUY/edit?usp=sharing"
-
-    # POTD test
     url = "https://docs.google.com/spreadsheets/d/1PfOBLuiQcNfOdTgdTAkgw8vqivz7liHQimlzr4AgBHc/edit?usp=sharing"
 
     conn = st.connection("gsheets", type=GSheetsConnection)
@@ -92,7 +70,7 @@ else:
     # Filter the DataFrame to show only rows from today
     df_today = df[df['Date'] == formatted_date]
 
-    # Display the filtered DataFrame
+
     st.dataframe(df_today, hide_index=True)
     # st.dataframe(df_today)
 
