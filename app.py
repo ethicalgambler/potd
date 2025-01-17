@@ -67,11 +67,21 @@ else:
     df.columns = column_names
 
     # Convert the 'Date' column to datetime format (assuming the date format is MM/DD/YY)
-    df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
+    # df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
 
     # Get today's date
-    today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
-    print(today)
+    # today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
+
+
+
+
+
+    today = datetime.today()
+    formatted_date = today.strftime('%-m/%-d/%y')  # Use '-' to remove leading zeros
+    print(formatted_date)
+
+    
+
     # Filter the DataFrame to show only rows from today
     df_today = df[df['Date'] == "1/16/25"]
 
