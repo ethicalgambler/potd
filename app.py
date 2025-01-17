@@ -30,7 +30,6 @@ load_css(css_path)
 # st.error("This is an error alert!")
 # st.warning("This is a warning alert!")
 st.success("This is a success alert!")
-print('test')
 
 # # time.sleep(5)
 # theme = st_theme()
@@ -71,8 +70,9 @@ else:
 
     # Get today's date
     today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
+    st.success(today)
 
-    print(today)
+    
 
 
 
