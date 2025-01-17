@@ -77,7 +77,7 @@ else:
 
 
     today = datetime.today()
-    formatted_date = today.strftime('%-m/%-d/%y')  # Use '-' to remove leading zeros
+    formatted_date = today.strftime('%m/%d/%y').lstrip('0').replace('/0', '/')
     print(formatted_date)
 
     
