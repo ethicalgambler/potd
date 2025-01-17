@@ -37,7 +37,7 @@ load_css(css_path)
 # st.write(theme)
 
 theme = st_theme()
-background_color = theme.get("backgroundColor")
+background_color = theme.get("backgroundColor", None)
 
 if background_color != "#ffffff":
     st.warning("This is a warning alert!")
