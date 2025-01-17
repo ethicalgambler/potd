@@ -65,21 +65,21 @@ else:
 
     df.columns = column_names
 
-    # Convert the 'Date' column to datetime format (assuming the date format is MM/DD/YY)
-    df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
+    # # Convert the 'Date' column to datetime format (assuming the date format is MM/DD/YY)
+    # df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
 
-    # Get today's date
-    today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
-    st.success(today)
+    # # Get today's date
+    # today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
+    # st.success(today)
 
     
 
 
 
-    # today = datetime.today()
-    # formatted_date = today.strftime('%m/%d/%y').lstrip('0').replace('/0', '/')
-    # print(formatted_date)
-    # print('test')
+    today = datetime.today()
+    formatted_date = today.strftime('%m/%d/%y').lstrip('0').replace('/0', '/')
+    st.success(formatted_date)
+
     
 
     # Filter the DataFrame to show only rows from today
