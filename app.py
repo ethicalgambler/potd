@@ -67,7 +67,7 @@ else:
     df.columns = column_names
 
     # Convert the 'Date' column to datetime format (assuming the date format is MM/DD/YY)
-    df['Date'] = p  d.to_datetime(df['Date'], format='%m/%d/%y')
+    df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%y')
 
     # Get today's date
     today = pd.to_datetime(datetime.today().strftime('%m/%d/%y'), format='%m/%d/%y')
