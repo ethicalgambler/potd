@@ -23,9 +23,14 @@ st.warning("This is a warning alert!")
 st.success("This is a success alert!")
 
 
-# time.sleep(5)
+# # time.sleep(5)
+# theme = st_theme()
+# st.write(theme)
+
 theme = st_theme()
-st.write(theme)
+background_color = theme.get("backgroundColor", "Key not found")  # Use .get() for safe access
+st.write(background_color)
+
 
 
 # Custom CSS fucntion start
